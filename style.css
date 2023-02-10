@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+    color: black;
+}
+
+/* tags */
+body {
+    background-color: whitesmoke;
+}
+
+hr {
+    border-top: 3px solid #536372;
+    margin: 30px 50px 10px;
+}
+
+dd {
+    font-style: italic;
+    color: #536372;
+    font-size: 15px;
+    position: relative;
+}
+
+/* end of tags */
+
+.index-main {
+    margin: 150px auto;
+    width: 500px;;
+}
+
+/* index page links */
+.link {
+    color: dimgrey;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link ~ a {
+    color: dodgerblue;
+    font-weight: normal;
+}
+
+.link:hover,
+.link ~ a:hover {
+    text-shadow: 1px 2px lightpink;
+    text-decoration: none;
+}
+
+.linkNoDecoration {
+    text-decoration: none;
+}
+
+/* END of index page links */
+
+/* Navigation menu */
+#navigation-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+button-holder {
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+.nav-button {
+    background-color: #4accff;
+    min-width: 150px;
+    min-height: 40px;
+    font-size: 20px;
+}
+
+.nav-button:hover {
+    background-color: #007aab;
+    color: white;
+}
+
+#home-button {
+    background-color: #282828;
+    color: white;
+    cursor: pointer;
+}
+
+#home-button:hover {
+    background-color: lightslategrey;
+}
+
+.nav-list {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    background-color: #ffd7d7;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    min-height: 30px;
+    margin: auto;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #fff4f4;
+}
+
+.button-holder:hover .nav-list {
+    display: block;
+}
+
+/* END of Navigation menu */
+
+#display-result,
+#form-perpage {
+    margin-bottom: 10px;
+}
+
+#add-article {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 70px;
+    right: 10px;
+}
+
+#add-article input {
+    background-color: deepskyblue;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gray 2px 2px 2px 2px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: dimgrey 2px 2px 2px;
+    cursor: pointer;
+}
+
+#add-article input:hover {
+    background-color: #4accff;
+    box-shadow: black 2px 2px 2px 2px;
+}
+
+#add-article input:active {
+    background-color: #4accff;
+    box-shadow: black -2px -2px 2px -2px;
+}
+
+#existing-details-table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#existing-details-table td,
+#existing-details-table th {
+    border: 1px solid black;
+    padding: 2px 5px;
+}
+
+#existing-details-table th {
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    background-color: lightsalmon;
+}
+
+#existing-details-table tr {
+    background-color: ivory;
+}
+
+.success,
+.fail {
+    font-size: 20px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+.success {
+    background-color: palegreen;
+}
+
+.fail {
+    background-color: salmon;
+}
+
+/* form - adding an article/customer/order */
+.form-main {
+    margin: 100px auto;
+    width: 700px;
+}
+
+.form-main fieldset {
+    position: relative;
+    min-width: 100%;
+}
+
+.form-main input,
+.form-main select {
+    position: absolute;
+    right: 30px;
+}
+
+fieldset input,
+fieldset select {
+    width: 60%;
+    max-width: 60%;
+}
+
+fieldset input[type=number] {
+    width: 10%;
+    max-width: 10%;
+}
+
+fieldset input:hover,
+fieldset textarea:hover,
+fieldset select:hover {
+    background-color: white;
+}
+
+#comment,
+.comment {
+    width: calc(100% - 10px);
+    resize: vertical;
+    margin-bottom: 40px;
+}
+
+#orderComment {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.form-wrapper {
+    font-size: 25px;
+    padding: 30px 65px;
+    box-shadow: 1px 2px 5px 3px grey;
+}
+
+.form-wrapper, .form-wrapper p, .form-wrapper a {
+    background-color: lightgoldenrodyellow;
+}
+
+.form-wrapper label {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.input-item {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+#enableEdit {
+    position: absolute;
+    right: 0;
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1px 4px;
+    margin: 0 30px;
+    border-radius: 2px;
+    background-color: dimgrey;;
+}
+
+#enableEdit:hover {
+    color: whitesmoke;
+    background-color: darkgrey;
+}
+
+.article-type,
+.article-type span {
+    font-size: 25px;
+    color: deeppink;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: black 1px 1px 1px;
+}
+
+.article-type span:hover {
+    padding: 5px;
+    background-color: dimgrey;
+    text-shadow: white 1px 1px 1px;
+    cursor: pointer;
+    border: 2px solid coral;
+    border-radius: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.article-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.item-qty-div {
+    padding: 5px 0;
+}
+
+.item-qty {
+    margin-top: 4px;
+    text-align: right;
+}
+
+.item-comment {
+    position: absolute;
+    right: 10px;
+    height: 35px;
+    width: 250px;
+    resize: none;
+}
+
+details:last-of-type {
+    margin-bottom: 20px;
+}
+
+.remove-article {
+    font-size: 13px;
+    color: red;
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 2px;
+    margin-left: 102px;
+    cursor: pointer;
+}
+
+.remove-article:hover {
+    background-color: lightsalmon;
+}
+
+/* END of form - adding an article/customer/order */
+
+.created-by {
+    text-align: center;
+    font-style: italic;
+}
+
+/* table - list of articles */
+.main-table,
+.main-table td,
+.main-table th {
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 18px;
+    color: #1a3939;
+}
+
+.main-table tr:nth-of-type(odd) td {
+    background-color: #cdf0ff;
+}
+
+.main-table tr:nth-of-type(even) td {
+    background-color: #fff2e0;
+}
+
+.main-table .inactive-article td,
+.main-table .inactive-article td a {
+    color: #d70000;
+}
+
+.main-table tr:hover td,
+.main-table tr:hover td a {
+    background-color: #deffde;
+    font-weight: bold;
+}
+
+.main-table .has-lcard {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_quantity {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* END of  table - list of articles */
+
+/*** --- helpers --- ***/
+.textcentered {
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
